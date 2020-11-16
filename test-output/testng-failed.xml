@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Seleniumcoding.Ajio">
+      <class name="Seleniumcoding.SnapdealWatch">
         <methods>
           <include name="setup"/>
-          <include name="ajioWomen"/>
-          <include name="teardowns"/>
+          <include name="teardown"/>
+          <include name="snapdeal"/>
         </methods>
-      </class> <!-- Seleniumcoding.Ajio -->
+      </class> <!-- Seleniumcoding.SnapdealWatch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
