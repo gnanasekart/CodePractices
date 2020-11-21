@@ -10,7 +10,24 @@ public class anagram {
 
 		String s = "anagram";
 		String t = "nagaram";
+		
+		String a = "avajava";
+		String b = "javaava";
+		
+		//method 1:
+		String m = b+b;
 
+		if(m.contains(b))
+		{
+			System.out.println("correct");
+		}
+		else
+		{
+			System.out.println("wrong");
+		}
+		
+		//method 2
+		
 		String string1 = s.replaceAll("/s", "");
 		String string2 = t.replaceAll("/s", "");
 		

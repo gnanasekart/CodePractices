@@ -19,6 +19,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,7 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
-public static WebDriver d;
+public static RemoteWebDriver d;
 
 public TestBase()
 {
@@ -38,7 +39,13 @@ public TestBase()
 		if(browser == "chrome")
 		{
 			WebDriverManager.chromedriver().setup();
+			d= new ChromeDriver();
 
+		}
+		else if(browser == "chromeoptions")
+		{
+			WebDriverManager.chromedriver().setup();
+			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-popup-blocking");
 			options.addArguments("start-maximized");
@@ -47,6 +54,7 @@ public TestBase()
 			 cap.setCapability(ChromeOptions.CAPABILITY, options);
 			 d = new ChromeDriver(cap);
 		}
+
 		else if(browser == "ff")
 		{
 			WebDriverManager.firefoxdriver().setup();
