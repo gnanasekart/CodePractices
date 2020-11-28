@@ -5,8 +5,6 @@ public class BinaryOperatorFI {
 
 	public static void main(String[] args) {
 		
-		
-		
 		BinaryOperator<Integer> bo = BinaryOperator.maxBy((a, b) -> (a > b)? 1 : ((a == b)? 0 : -1))   ;
 		System.out.println(bo.apply(25, 66));
 		
@@ -17,9 +15,6 @@ public class BinaryOperatorFI {
 		System.out.println(bf.apply(20,  30));
 		
 		BinaryOperator<Integer> boi = (x,y) -> x+y;
-		System.out.println(boi.apply(20,  30));
-		
-		
+		System.out.println(boi.apply(20,  30));	
 	}
-
 }
