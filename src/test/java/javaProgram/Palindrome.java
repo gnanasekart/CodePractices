@@ -1,5 +1,10 @@
 package javaProgram;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.poi.hpsf.Array;
 import org.testng.annotations.Test;
 
 public class Palindrome {
@@ -25,27 +30,32 @@ public class Palindrome {
 	}
 	//.................................................	
 
-	@Test
+	@Test(enabled = false)
 	public void PalindromeString() {
 		String name = "gnana";
 		call(name);
 	}
-	
+
 	public static boolean call(String name)
 	{
 		char[] charArray = name.toCharArray();
- int l = charArray.length;
- int i = 0;
- 
-// if(charArray[0] == 0 || charArray[1] == 1)
-// {
-//	 return true;
-// }
- if(charArray[i] == charArray[l-1])
- {
-	 ++i;
-	 --l;
- }	
+		int l = charArray.length;
+		int i = 0;
+
+		if(charArray[0] == 0 || charArray[1] == 1)
+		{
+			return true;
+		}
+		if(charArray[i] == charArray[l-1])
+		{
+			++i;
+			--l;
+		}	
 		return false;
 	}
+
+
+	//----------------------------------------------------------
+
+	
 }
