@@ -7,9 +7,10 @@ public class PrimeNumber {
 		//prime1(num);
 		int start = 4;
 		int end = 25;
-		primebetween2(start, end);
+		//primebetween2(start, end);
+		primecheck(13);
 	}
-	
+
 	public static void prime1(int n)
 	{
 		boolean s = false;
@@ -21,16 +22,16 @@ public class PrimeNumber {
 				break;
 			}
 		}
-			if(s != true)
-			{
-				System.out.println("prime number");
-			}else
-			{
-				System.out.println("not a prime number");
-			}
-
+		if(s != true)
+		{
+			System.out.println("prime number");
+		}else
+		{
+			System.out.println("not a prime number");
 		}
-	
+
+	}
+
 	public static void primebetween2(int start, int end)
 	{
 		while(start < end)
@@ -51,5 +52,23 @@ public class PrimeNumber {
 			start++;
 		}	
 	}
+
+	public static void primecheck(int n)
+	{ 
+		int i = 2;
+	if(n == 1)
+	{
+		System.out.println("not prime");
 	}
+	else if(i<=n/2 && n%i == 0)
+	{
+		System.out.println("not prime");
+	}
+	else
+	{
+		System.out.println("prime only");
+	}
+	++i;
+	}
+}
 

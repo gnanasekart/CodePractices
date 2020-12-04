@@ -38,7 +38,8 @@ public class TestBase {
 	{
 		if(browser == "chrome")
 		{
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver86.exe");
 			d= new ChromeDriver();
 
 		}
@@ -95,8 +96,8 @@ public class TestBase {
 		}
 
 		d.manage().window().maximize();
-		d.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		d.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		d.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		d.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		d.manage().deleteAllCookies();
 		d.get(URL);
 	}

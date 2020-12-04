@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="5" name="Suite" parallel="methods">
+	<test name="Test">
+		<parameter name="text" value="first" />
+		<classes>
+			<class name="TestNGPkg.TestNgParallel" />
+			<!-- <class name="TestNGPkg.TestNgParallelBrowser"/> -->
+		</classes>
+	</test>
+
+	<test name="text">
+		<!-- <parameter name="text" value="second" /> -->
+		<classes>
+		<!--  <class name = "TestNGPkg.TestNgPriority" /> --> 
+			<!-- <class name="TestNGPkg.TestNgParallel" /> -->
+			<!-- <class name="TestNGPkg.TestNgParallelBrowser"/> -->
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

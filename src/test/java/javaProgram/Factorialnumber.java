@@ -9,8 +9,10 @@ public class Factorialnumber {
 				{
 					num = num*i;
 				}
-		System.out.println(num);
-		fact(5);
+		//System.out.println(num);
+		//fact(5);
+		System.out.println("fact "+recursivefactorial(5));
+		System.out.println("fact "+recursivefactorial(0));
 	}
 	
 	public static void fact(int num)
@@ -22,4 +24,14 @@ public class Factorialnumber {
 		}
 		System.out.println("in method " +sum);
 	}
+	
+	public static int recursivefactorial(int num)
+	{
+		if(num >= 1)
+		{
+			return num * recursivefactorial(num-1);
+		}
+		else {
+		return 1;
+	}}
 }
