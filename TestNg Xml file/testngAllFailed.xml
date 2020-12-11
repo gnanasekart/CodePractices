@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FailedTestCases">
+<listeners> 
+<listener class-name ="TestNGPkg.TestNgISuiteListener" ></listener>
+</listeners>
+  <test thread-count="5" name="AllFailedTest">
+    <classes>
+      <class name="TestNGPkg.TestNgDependency"/>
+      <class name="TestNGPkg.FailedTestRun"/>
+    </classes>
+  </test> <!-- AllFailedTest -->
+</suite> <!-- FailedTestCases -->

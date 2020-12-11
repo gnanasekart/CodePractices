@@ -16,8 +16,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -38,39 +40,49 @@ public class TestBase {
 	{
 		if(browser == "chrome")
 		{
-			//WebDriverManager.chromedriver().setup();
-			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver86.exe");
+			WebDriverManager.chromedriver().setup();
+			//System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver86.exe");
 			d= new ChromeDriver();
-
 		}
 		else if(browser == "chromeoptions")
 		{
 			WebDriverManager.chromedriver().setup();
 
+			DesiredCapabilities cap = new DesiredCapabilities();
+			
+			cap.setCapability(ChromeOptions.CAPABILITY, cap);
+			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-popup-blocking");
 			options.addArguments("start-maximized");
-
-			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setCapability(ChromeOptions.CAPABILITY, options);
-			d = new ChromeDriver(cap);
+			options.addArguments("--incognito");
+			
+			d = new ChromeDriver(options);
 		}
-
+//		else if(browser == "chromeheadless")
+//		{
+//			WebDriverManager.chromedriver().setup();
+//			
+//			DesiredCapabilities cap = DesiredCapabilities.chrome();
+//			cap.setCapability(URL, CapabilityType);
+//			
+//			ChromeOptions option - new ChromeOptions(cap);
+//		}
 		else if(browser == "ff")
 		{
 			WebDriverManager.firefoxdriver().setup();
 			d = new FirefoxDriver();
 		}
-
 		else if(browser =="cff")
 		{
 			WebDriverManager.firefoxdriver().setup();
 			DesiredCapabilities cap = DesiredCapabilities.firefox();
 			cap.setCapability("browser.privatebrowsing.autostart", true);
-			FirefoxDriver fd = new FirefoxDriver(cap);
+			FirefoxOptions option = new FirefoxOptions(cap);
+			
+			FirefoxDriver fd = new FirefoxDriver(option);
 			fd.get(URL);
 		}		
-
 		else if(browser == "edge")
 		{
 			WebDriverManager.edgedriver().setup();

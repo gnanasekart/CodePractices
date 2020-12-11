@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNGPkg.TestNgDependency">
+      <class name="com.qa.LeafGround.IncognitoBrowser">
         <methods>
-          <include name="update1"/>
-          <include name="update"/>
-          <include name="login"/>
-          <include name="openBrowser"/>
-          <include name="update2"/>
+          <include name="teardown"/>
+          <include name="start"/>
+          <include name="edge"/>
         </methods>
-      </class> <!-- TestNGPkg.TestNgDependency -->
+      </class> <!-- com.qa.LeafGround.IncognitoBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,19 +1,22 @@
 package TestNGPkg;
 
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(TestNGPkg.TestNgIInvokedMethodListener.class)
+//@Listeners(TestNGPkg.TestNgIInvokedMethodListener.class)
 public class TestNgDependency
 {	
 	
 	@Test()
-	public void openBrowser()
+	public void openBrowser(ITestContext context)
 	{
+		int add = TestNgSkip.add(2, 2);
+		context.setAttribute("addition", add);
 		Assert.assertEquals(TestNgSkip.add(2, 2), 4);
 		//depends on method from another class
 		//if that method comes update @Test means it will not consider it need to be out of annotations
@@ -24,29 +27,32 @@ public class TestNgDependency
 	@Test(dependsOnMethods= { "openBrowser" })
 	public void login()
 	{
-		Assert.assertTrue(true);
 		System.out.println("login");
+		Assert.assertTrue(false);
+		
 	}
 	
 	@Test(dependsOnMethods= { "openBrowser", "login" })
-	public void update()
+	public void update(ITestContext context)
 	{
+		System.out.println("update value = "+context.getAttribute("addition"));
 		Assert.assertTrue(true);
-		System.out.println("update");
+		
 	}
 	
 	@Test(dependsOnMethods= { "update" }, alwaysRun=true)
 	public void update1()
 	{
-		Assert.assertTrue(true);
 		System.out.println("update1");
+		Assert.assertTrue(true);
+		
 	}
 	
 	@Test(dependsOnMethods= { "update1" }, alwaysRun=true)
 	public void update2()
 	{
 		String name = "a";
-		if(name.contains("A"))
+		if(name.contains("a"))
 		{
 		System.out.println("update2");}
 		else
@@ -60,6 +66,7 @@ public class TestNgDependency
 	{
 		System.out.println("logged out");	
 	}
+	
 	/*
 	@AfterMethod
 	public void afterMethod(ITestResult result) {

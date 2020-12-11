@@ -8,7 +8,8 @@ import org.testng.asserts.SoftAssert;
 //@Listeners(TestNGPkg.TestNgListenerIItestL.class)
 public class TestNGHardAssert {
 
-	@Test(enabled=true)
+	//@Test(retryAnalyzer = TestNGPkg.TestNgRetryAnalyzer.class)
+	@Test
 	public void hardAssert1()
 	{
 		System.out.println("start");
@@ -27,7 +28,7 @@ public class TestNGHardAssert {
 		soft.assertEquals(true, false);
 		
 		System.out.println("end");
-		//soft.assertAll();//if we dont use this stmt means soft assert will show failed cases as pass only
+		soft.assertAll();//if we dont use this stmt means soft assert will show failed cases as pass only
 		
 	}
 }

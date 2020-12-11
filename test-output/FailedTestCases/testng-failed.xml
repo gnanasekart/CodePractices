@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [FailedTestCases]">
+  <listeners>
+    <listener class-name="TestNGPkg.TestNgISuiteListener"/>
+  </listeners>
+  <test thread-count="5" name="AllFailedTest(failed)">
+    <classes>
+      <class name="TestNGPkg.TestNgDependency">
+        <methods>
+          <include name="update"/>
+          <include name="login"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- TestNGPkg.TestNgDependency -->
+    </classes>
+  </test> <!-- AllFailedTest(failed) -->
+</suite> <!-- Failed suite [FailedTestCases] -->

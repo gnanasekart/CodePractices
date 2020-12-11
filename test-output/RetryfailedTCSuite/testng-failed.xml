@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [RetryfailedTCSuite]">
+  <listeners>
+    <listener class-name="TestNGPkg.TestNgFailedTCITestAnnotation"/>
+  </listeners>
+  <test thread-count="5" verbose="5" name="RetryTC(failed)">
+    <classes>
+      <class name="TestNGPkg.TestNGHardAssert">
+        <methods>
+          <include name="hardAssert1"/>
+          <include name="softAssert1"/>
+        </methods>
+      </class> <!-- TestNGPkg.TestNGHardAssert -->
+    </classes>
+  </test> <!-- RetryTC(failed) -->
+</suite> <!-- Failed suite [RetryfailedTCSuite] -->
