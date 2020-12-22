@@ -72,7 +72,7 @@ public class StreamFilter {
 		Map<Integer, String> map = prod.stream().filter(Product -> Product.price > 100).collect(Collectors.toMap(p -> p.id, p -> p.name));
 		//System.out.println(map);
 		
-		//method reference in stram
+		//method reference in stream
 		List<Double> mf = prod.stream().filter(p -> p.price >= 100).map(Product::getPrice).collect(Collectors.toList());
 		System.out.println(mf);
 	}

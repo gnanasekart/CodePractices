@@ -1,4 +1,4 @@
-package Concept;
+package ThreadConcept;
 
 class MyApp
 {
