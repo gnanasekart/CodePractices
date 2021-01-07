@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.LeafGround.BrokenLinks">
+      <class name="Excel.CreateLead">
         <methods>
-          <include name="setup"/>
+          <include name="createLeadrecord" invocation-numbers="0"/>
+          <include name="start"/>
+          <include name="launchbrowser"/>
           <include name="teardown"/>
-          <include name="brokenlinks"/>
         </methods>
-      </class> <!-- com.qa.LeafGround.BrokenLinks -->
+      </class> <!-- Excel.CreateLead -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -46,8 +46,8 @@ public class XlsReader
 			e.printStackTrace();
 		} 
 	}
-	
-	// returns the row count in a sheet
+
+	//************** returns the row count in a sheet****************************
 	public int getRowCount(String sheetName)
 	{
 		int index = workbook.getSheetIndex(sheetName);
@@ -60,17 +60,17 @@ public class XlsReader
 		}
 	}
 
-	// returns the data from a cell
+	//************** returns the data from a cell****************************
 	public String getCellData(String sheetName,String colName,int rowNum){
 		try{
 			if(rowNum <=0)
 				return "";
-
+			//getting index 
 			int index = workbook.getSheetIndex(sheetName);
 			int col_Num=-1;
 			if(index==-1)
 				return "";
-
+			//getting column num using colname
 			sheet = workbook.getSheetAt(index);
 			row=sheet.getRow(0);
 			for(int i=0;i<row.getLastCellNum();i++)
@@ -84,7 +84,7 @@ public class XlsReader
 
 			sheet = workbook.getSheetAt(index);
 			row = sheet.getRow(rowNum-1);
-			
+			//getting the cell value
 			if(row==null)
 				return "";
 			cell = row.getCell(col_Num);
@@ -92,13 +92,16 @@ public class XlsReader
 			if(cell==null)
 				return "";
 			//System.out.println(cell.getCellType());
-			
+			//checking the celltype weather it is String, Numeric, Formula, Blank, Null, Boolean
+
 			if(cell.getCellType()==CellType.STRING)
 				return cell.getStringCellValue();
-			else if(cell.getCellType()==CellType.NUMERIC || cell.getCellType()==CellType.FORMULA ){
 
+			else if(cell.getCellType()==CellType.NUMERIC || cell.getCellType()==CellType.FORMULA )
+			{
 				String cellText  = String.valueOf(cell.getNumericCellValue());
-				if (DateUtil.isCellDateFormatted(cell)) {
+				if (DateUtil.isCellDateFormatted(cell)) 
+				{
 					// format in form of M/D/YY
 					double d = cell.getNumericCellValue();
 
@@ -110,23 +113,26 @@ public class XlsReader
 							cellText;
 					//System.out.println(cellText);
 				}
-
 				return cellText;
-			}else if(cell.getCellType()==CellType.BLANK)
+			}
+			else if(cell.getCellType()==CellType.BLANK)
 				return ""; 
 			else 
 				return String.valueOf(cell.getBooleanCellValue());
 		}
-		catch(Exception e){
+		catch(Exception e)
+		{
 			e.printStackTrace();
 			return "row "+rowNum+" or column "+colName +" does not exist in xls";
 		}
 	}
 
-	// returns the data from a cell
-	public String getCellData(String sheetName,int colNum,int rowNum){
-		try{
-			if(rowNum <=0)
+	//************** returns the data from a cell****************************
+	public String getCellData(String sheetName,int colNum,int rowNum)
+	{
+		try
+		{
+			if(rowNum <= 0)
 				return "";
 
 			int index = workbook.getSheetIndex(sheetName);
@@ -136,18 +142,22 @@ public class XlsReader
 
 			sheet = workbook.getSheetAt(index);
 			row = sheet.getRow(rowNum-1);
+
 			if(row==null)
 				return "";
+
 			cell = row.getCell(colNum);
 			if(cell==null)
 				return "";
 
 			if(cell.getCellType()==CellType.STRING)
 				return cell.getStringCellValue();
-			else if(cell.getCellType()==CellType.NUMERIC || cell.getCellType()==CellType.FORMULA ){
 
+			else if(cell.getCellType()==CellType.NUMERIC || cell.getCellType()==CellType.FORMULA)
+			{
 				String cellText  = String.valueOf(cell.getNumericCellValue());
-				if (DateUtil.isCellDateFormatted(cell)) {
+				if (DateUtil.isCellDateFormatted(cell)) 
+				{
 					// format in form of M/D/YY
 					double d = cell.getNumericCellValue();
 
@@ -167,15 +177,18 @@ public class XlsReader
 			else 
 				return String.valueOf(cell.getBooleanCellValue());
 		}
-		catch(Exception e){
+		catch(Exception e)
+		{
 			e.printStackTrace();
 			return "row "+rowNum+" or column "+colNum +" does not exist  in xls";
 		}
 	}
 
-	// returns true if data is set successfully else false
-	public boolean setCellData(String sheetName,String colName,int rowNum, String data){
-		try{
+	// **************returns true if data is set successfully else false****************************
+	public boolean setCellData(String sheetName,String colName,int rowNum, String data)
+	{
+		try
+		{
 			fis = new FileInputStream(path); 
 			workbook = new XSSFWorkbook(fis);
 			if(rowNum<=0)
@@ -189,7 +202,8 @@ public class XlsReader
 			sheet = workbook.getSheetAt(index);
 
 			row=sheet.getRow(0);
-			for(int i=0;i<row.getLastCellNum();i++){
+			for(int i=0;i<row.getLastCellNum();i++)
+			{
 				//System.out.println(row.getCell(i).getStringCellValue().trim());
 				if(row.getCell(i).getStringCellValue().trim().equals(colName))
 					colNum=i;
@@ -227,7 +241,8 @@ public class XlsReader
 	}
 
 
-	// returns true if data is set successfully else false
+	//************** returns true if data is set successfully else false****************************
+
 	public boolean setCellData(String sheetName,String colName,int rowNum, String data,String url){
 		//System.out.println("setCellData setCellData******************");
 		try{
@@ -254,7 +269,7 @@ public class XlsReader
 
 			if(colNum==-1)
 				return false;
-			sheet.autoSizeColumn(colNum); //ashish
+			sheet.autoSizeColumn(colNum);
 			row = sheet.getRow(rowNum-1);
 			if (row == null)
 				row = sheet.createRow(rowNum-1);
@@ -267,7 +282,7 @@ public class XlsReader
 			XSSFCreationHelper createHelper = workbook.getCreationHelper();
 
 			//cell style for hyperlinks
-			//by default hypelrinks are blue and underlined
+			//by default hyperlinks are blue and underlined
 			CellStyle hlink_style = workbook.createCellStyle();
 			XSSFFont hlink_font = workbook.createFont();
 			hlink_font.setUnderline(XSSFFont.U_SINGLE);
@@ -294,17 +309,19 @@ public class XlsReader
 	}
 
 
-
-	// returns true if sheet is created successfully else false
+	// **************returns true if sheet is created successfully else false****************************
 	public boolean addSheet(String  sheetname){		
 
 		FileOutputStream fileOut;
-		try {
+		try 
+		{
 			workbook.createSheet(sheetname);	
 			fileOut = new FileOutputStream(path);
 			workbook.write(fileOut);
 			fileOut.close();		    
-		} catch (Exception e) {			
+		}
+		catch (Exception e) 
+		{			
 			e.printStackTrace();
 			return false;
 		}
@@ -312,7 +329,8 @@ public class XlsReader
 	}
 
 	// returns true if sheet is removed successfully else false if sheet does not exist
-	public boolean removeSheet(String sheetName){		
+	public boolean removeSheet(String sheetName)
+	{		
 		int index = workbook.getSheetIndex(sheetName);
 		if(index==-1)
 			return false;
@@ -323,17 +341,19 @@ public class XlsReader
 			fileOut = new FileOutputStream(path);
 			workbook.write(fileOut);
 			fileOut.close();		    
-		} catch (Exception e) {			
+		} catch (Exception e) 
+		{			
 			e.printStackTrace();
 			return false;
 		}
 		return true;
 	}
-	// returns true if column is created successfully
-	public boolean addColumn(String sheetName,String colName){
-		//System.out.println("**************addColumn*********************");
 
-		try{				
+	// returns true if column is created successfully
+	public boolean addColumn(String sheetName,String colName)
+	{	
+		try
+		{				
 			fis = new FileInputStream(path); 
 			workbook = new XSSFWorkbook(fis);
 			int index = workbook.getSheetIndex(sheetName);
@@ -369,32 +389,34 @@ public class XlsReader
 			e.printStackTrace();
 			return false;
 		}
-
 		return true;
-
-
 	}
+	
 	// removes a column and all the contents
-	public boolean removeColumn(String sheetName, int colNum) {
-		try{
+	public boolean removeColumn(String sheetName, int colNum) 
+	{
+		try
+		{
 			if(!isSheetExist(sheetName))
 				return false;
 			fis = new FileInputStream(path); 
 			workbook = new XSSFWorkbook(fis);
 			sheet=workbook.getSheet(sheetName);
+		
 			XSSFCellStyle style = workbook.createCellStyle();
 			style.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
 			@SuppressWarnings("unused")
 			XSSFCreationHelper createHelper = workbook.getCreationHelper();
 			style.setFillPattern(FillPatternType.NO_FILL);
 
-
-
-			for(int i =0;i<getRowCount(sheetName);i++){
+			for(int i =0;i<getRowCount(sheetName);i++)
+			{
 				row=sheet.getRow(i);	
-				if(row!=null){
+				if(row!=null)
+				{
 					cell=row.getCell(colNum);
-					if(cell!=null){
+					if(cell!=null)
+					{
 						cell.setCellStyle(style);
 						row.removeCell(cell);
 					}
@@ -409,12 +431,14 @@ public class XlsReader
 			return false;
 		}
 		return true;
-
 	}
+	
 	// find whether sheets exists	
-	public boolean isSheetExist(String sheetName){
+	public boolean isSheetExist(String sheetName)
+	{
 		int index = workbook.getSheetIndex(sheetName);
-		if(index==-1){
+		if(index==-1)
+		{
 			index=workbook.getSheetIndex(sheetName.toUpperCase());
 			if(index==-1)
 				return false;
@@ -426,7 +450,8 @@ public class XlsReader
 	}
 
 	// returns number of columns in a sheet	
-	public int getColumnCount(String sheetName){
+	public int getColumnCount(String sheetName)
+	{
 		// check if sheet exists
 		if(!isSheetExist(sheetName))
 			return -1;
@@ -438,14 +463,11 @@ public class XlsReader
 			return -1;
 
 		return row.getLastCellNum();
-
-
-
 	}
+	
 	//String sheetName, String testCaseName,String keyword ,String URL,String message
 	public boolean addHyperLink(String sheetName,String screenShotColName,String testCaseName,int index,String url,String message){
-		//System.out.println("ADDING addHyperLink******************");
-
+	
 		url=url.replace('\\', '/');
 		if(!isSheetExist(sheetName))
 			return false;
@@ -459,27 +481,25 @@ public class XlsReader
 				break;
 			}
 		}
-
-
 		return true; 
 	}
-	public int getCellRowNum(String sheetName,String colName,String cellValue){
-
-		for(int i=2;i<=getRowCount(sheetName);i++){
-			if(getCellData(sheetName,colName , i).equalsIgnoreCase(cellValue)){
+	
+	public int getCellRowNum(String sheetName,String colName,String cellValue)
+	{
+		for(int i=2;i<=getRowCount(sheetName);i++)
+		{
+			if(getCellData(sheetName,colName , i).equalsIgnoreCase(cellValue))
+			{
 				return i;
 			}
 		}
 		return -1;
-
 	}
 
 	// to run this on stand alone
-	public static void main(String arg[]) throws IOException{
-
-		//System.out.println(filename);
+	public static void main(String arg[]) throws IOException
+	{
 		XlsReader datatable = null;
-
 
 		datatable = new XlsReader("H:\\Student_Selenium_Workspaces\\Framework_Weekend\\src\\Framework_XL_Files\\Controller.xlsx");
 		for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
