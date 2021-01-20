@@ -8,15 +8,13 @@ public class AdditionOfTwoPrime {
 
 		for(int i =2; i<=n/2; i++)
 		{
-			if(isPrime(i))
+			if(isPrime(i) && isPrime(n-i))
 			{
-				if(isPrime(n-i))
-				{
-					System.out.println(n+" = "+i+" + "+(n-i));
-					flags = true;
-				}
+				System.out.println(n+" = "+i+" + "+(n-i));
+				flags = true;
 			}
 		}
+
 		if(!flags)
 		{
 			System.out.println("it is nothing");
@@ -31,9 +29,9 @@ public class AdditionOfTwoPrime {
 			if(n%i == 0)
 			{
 				flag = false;
-			break;
+				break;
+			}
 		}
+		return flag;
 	}
-	return flag;
-}
 }

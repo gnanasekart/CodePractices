@@ -22,8 +22,7 @@ public class SortByteArray {
 		}
 
 		// Another byte Array
-		byte[] byteArray2 = 
-				new byte[] { 15, 22, 3, 41, 24, 77, 8, 9 };
+		byte[] byteArray2 = new byte[] { 15, 22, 3, 41, 24, 77, 8, 9 };
 
 		// Selective Sorting
 		/* public static void sort(byte[] a, int fromIndex,

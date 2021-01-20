@@ -26,7 +26,7 @@ public class Consectiveletter {
 		{
 			int ch1 = trim.charAt(i);
 			int ch2 = trim.charAt(i+1);
-			if(trim.charAt(i) == trim.charAt(i+1) && trim.charAt(i) == trim.charAt(i+2) && trim.charAt(i+1) == trim.charAt(i+2))
+if(trim.charAt(i) == trim.charAt(i+1) && trim.charAt(i) == trim.charAt(i+2) && trim.charAt(i+1) == trim.charAt(i+2))
 			{
 				count = 2;
 				if(count > top)

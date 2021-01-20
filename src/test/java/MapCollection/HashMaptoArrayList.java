@@ -28,25 +28,22 @@ public class HashMaptoArrayList {
 			System.out.println(l);
 		}
 		System.out.println("--------------------");
-	
+
 		Iterator iterator = hm.entrySet().iterator();
 		while(iterator.hasNext())
 		{
 			System.out.println(iterator.next());
 		}
-		
-		
 		System.out.println("--------------------");
+
 		List<Integer> in = new ArrayList<>(hm.values());
 		hm.forEach((k,v) -> System.out.println(k.toUpperCase() +"=" +v));
-		
+
 		System.out.println("--------------------");
 		LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
 		//Map<String, Integer> sortedMap = new SortedMap<>();
-		
-			linkedHashMap.putAll(hm);
-			System.out.println(linkedHashMap);
-	
+
+		linkedHashMap.putAll(hm);
+		System.out.println(linkedHashMap);	
 	}
-		
 }

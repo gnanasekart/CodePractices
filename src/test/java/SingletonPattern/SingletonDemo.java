@@ -28,5 +28,4 @@ public class SingletonDemo {
 		System.out.println((x.str).toUpperCase());
 		System.out.println((x.str).toLowerCase());
 	}
-
 }

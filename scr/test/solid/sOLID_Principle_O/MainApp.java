@@ -2,7 +2,6 @@ package sOLID_Principle_O;
 
 public class MainApp {
 
-	
 	/**
 	 
 	 O  ->  OPEN/CLOSED PRINCIPLE
@@ -14,9 +13,9 @@ public class MainApp {
 	 	 		during the development and the maintaining phase of an application
 	 	 				For example: new functionalities have to be added !!!
 	 	 				
-	 	 		 Those changes in the existing code should be minimized
-	 	 		  WHY? It's assumed that the existing code is already unit tested and
-	 	 		   changes in already written code might affect the existing functionality in an unwanted manner.
+	 	 		 Those changes in the existing code should be minimized WHY? 
+	 	 		 It's assumed that the existing code is already unit tested and
+	 	 		 changes in already written code might affect the existing functionality in an unwanted manner.
 	 	 		   
 	 -------------------------------------------------------------------------------------------
 
@@ -43,7 +42,6 @@ public class MainApp {
 		- we can make sure this principle is not violated:
 			1.) strategy pattern
 			2.) template pattern
-	  
 	 */
 	
 	public static void main(String[] args) {
@@ -51,7 +49,8 @@ public class MainApp {
 		SorterManager sorterManager = new SorterManager();
 		sorterManager.sort(new QuickSort());
 		sorterManager.sort(new Mergesort());
-		//Here SortweManager has a method it is not implemented from interface, it denotes same method name as interface
+		//Here SorterManager has a method it is not implemented from interface, 
+		//it denotes same method name as interface
 		// By using that method name and passing the implemented class names are passing as instance
 		//here if we need to add new sort class means we can add by just adding new class and calling the class
 		//name in sorterManager

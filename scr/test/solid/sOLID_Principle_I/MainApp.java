@@ -2,8 +2,7 @@ package sOLID_Principle_I;
 
 public class MainApp {
 	/**
-	 * I -> INTERFACE SEGREGATION PRINCIPLE   SOLID
-	 * 
+	 * I -> INTERFACE SEGREGATION PRINCIPLE    
 	 * 	---------------------------------------------------
 	 * 
 	 * 		What is the motivation?
@@ -19,22 +18,18 @@ public class MainApp {
 	 * ----------------------------------------------------
 	 * 
 	 * - it is about business logic to clients communication - it is not good if
-	 *       an interface contains lots of methods
-	 *       	 We should separate them accordingly
+	 *       an interface contains lots of methods We should separate them accordingly
 	 * 
 	 * - The interface-segregation principle (ISP) states that no client should be
 	 *      forced to depend on methods it does not use !!!
 	 * 
 	 * - when we can, we should break our interfaces in many smaller ones, so they
-	 *    better satisfy the exact needs of our clients
-	 *    
+	 *    better satisfy the exact needs of our clients 
 	 */
 	
 	public static void main(String[] args) {
 		
 		Tree binraySearchTree = new BinarySearchTree();
 		Tree balancedTree = new BalancedTree();
-		
 	}
 }
-

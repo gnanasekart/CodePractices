@@ -30,7 +30,7 @@ public class Book implements BookHandler {
 	
 	@Override
 	public void save() {
-		this.bookPersistence.save(this);
+		this.bookPersistence.save(this);//dependency injection
 	}
 
 	@Override
@@ -38,4 +38,3 @@ public class Book implements BookHandler {
 		return authorName + " - " + numOfPages;
 	}
 }
-

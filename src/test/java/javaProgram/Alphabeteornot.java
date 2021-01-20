@@ -17,5 +17,4 @@ public class Alphabeteornot {
 //	char num = (char) i;
 //	System.out.print(num);
 //}
-	
 	}

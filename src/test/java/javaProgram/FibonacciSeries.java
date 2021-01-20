@@ -1,12 +1,12 @@
 package javaProgram;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 import org.testng.annotations.Test;
 
-public class FibonacciSeries {
-
-
+public class FibonacciSeries 
+{
 	@Test(enabled = false)
 	public void UsingForLoop()
 	{
@@ -60,7 +60,7 @@ public class FibonacciSeries {
 		return fibrec(n-2)+fibrec(n-1);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void UsingArray()
 	{
 		int[] arr = new int[100];
@@ -72,4 +72,30 @@ public class FibonacciSeries {
 		}
 		System.out.println(Arrays.toString(arr));
 	}
-}
+	
+	@Test
+	public void givenNumber()
+	{
+		Scanner sc = new Scanner(System.in);
+        int inputNumber = sc.nextInt();
+        int firstTerm = 0;
+        int secondTerm = 1;
+        int thirdTerm = 0;
+         
+        while (thirdTerm < inputNumber)
+        {
+            thirdTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = thirdTerm;
+        }
+         
+        if(thirdTerm == inputNumber)
+        {
+            System.out.println("Number belongs to Fibonacci series");
+        }
+        else
+        {
+            System.out.println("Number doesn't belongs to Fibonacci series");
+        }
+	}
+	}

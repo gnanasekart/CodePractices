@@ -24,6 +24,7 @@ public class NoOfCharInPercentage {
 		{
 			lowercase++;
 		}
+		
 		else if(Character.isDigit(ch))
 		{
 			number++;

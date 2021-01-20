@@ -9,8 +9,7 @@ public class MainApp {
 	  	What is the motivation of Liskov principle?
 	  		We usually create class hierarchies during the application development
 				For example: we extend some classes creating some derived classes !!!
-							
-				
+						
 				It would be great if the new derived classed would work as well
 					without replacing the functionality of the classes
 					
@@ -21,8 +20,9 @@ public class MainApp {
 
 	- child classes should never break the parent class type definition
 	
-	- Let q(x) be a property provable about objects x of type T. Then q(y) should be provable for objects 
-		y of type S where S is a subtype of T
+	- Let q(x) be a property provable about objects x of type T. 
+	  Then q(y) should be provable for objects y of type S 
+	  where S is a subtype of T
 			
 	- subtypes must be substitutable for their base types
 		( derived types must be completely substitutable for their base types )
@@ -34,7 +34,6 @@ public class MainApp {
 	- we can solve it with the help of Template Pattern
 	- it is not independent from Open Close Principle + interface segregation principle
 		The violation of Liskov principle is a latent violation of Open Closed Principle !!!
-		
 	 */
 	
 

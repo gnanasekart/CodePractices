@@ -11,6 +11,7 @@ public class DatesFormat {
 		DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy ");
 		 Date date = new Date();
 		 String today= dateFormat.format(date);
+		 
 		 System.out.println(today);
 
 	}

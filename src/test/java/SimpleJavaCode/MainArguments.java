@@ -9,6 +9,8 @@ public class MainArguments
 			for(String argument : args)
 			{
 				sum = sum + Float.parseFloat(argument);
+				
+				
 			}
 		} catch (NumberFormatException e) {
 			

@@ -2,6 +2,8 @@ package JavaCollection;
 
 import java.util.TreeSet;
 
+import Array.MyComparator;
+
 public class Comp2 {
 
 	

@@ -2,8 +2,6 @@ package Array;
 
 import java.util.Arrays;
 
-import JavaCollection.MyComparator;
-
 public class ArraysSearch {
 
 	public static void main(String[] args) {
@@ -15,6 +13,7 @@ public class ArraysSearch {
 	System.out.println(Arrays.binarySearch(a,14));//-5
 
 	String[] s = {"A", "C", "Z", "B"};
+	
 	Arrays.sort(s);
 	System.out.println(Arrays.binarySearch(s,"Z"));//2
 	System.out.println(Arrays.binarySearch(s,"S"));//-3

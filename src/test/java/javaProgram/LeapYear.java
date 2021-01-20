@@ -12,8 +12,12 @@ public class LeapYear {
 		{
 			if(i%100 == 0)
 			{
-				if(i%400 == 0){	leap = true;}
-				else {leap = false;	}
+				if(i%400 == 0)
+				{	leap = true;
+				}
+				else 
+				{leap = false;	
+				}
 			}
 			else {leap = true;}
 		}

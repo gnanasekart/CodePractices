@@ -67,8 +67,6 @@ public class SecondMostCount {
 
 
 
-
-
 		/*
 		String text = "Welcome to TestLEaf";
 

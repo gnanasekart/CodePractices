@@ -1,12 +1,33 @@
-package javaProgram;
+package String;
 
 import java.util.Arrays;
+
 import org.testng.Assert;
-public class Anagramstring {
+
+public class anagram {
 
 	public static void main(String[] args) {
-		String s = "LISTEN";
-		String t = "SILENT";
+
+		String s = "anagram";
+		String t = "nagaram";
+		
+		String a = "avajava";
+		String b = "javaava";
+		
+		//method 1:
+//		String m = b+b;
+//
+//		if(m.contains(b))
+//		{
+//			System.out.println("correct");
+//		}
+//		else
+//		{
+//			System.out.println("wrong");
+//		}
+		
+		//method 2
+		
 		String string1 = s.replaceAll("/s", "");
 		String string2 = t.replaceAll("/s", "");
 		
@@ -20,9 +41,10 @@ public class Anagramstring {
 		}
 		else
 		{
+			//boolean equals = scharArray.equals(tcharArray);
 			boolean equals2 = Arrays.equals(scharArray, tcharArray);
 			Assert.assertTrue(equals2);
 			System.out.println("Correct value");
 		}
-	}
+		}
 }

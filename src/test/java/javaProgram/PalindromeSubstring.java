@@ -15,9 +15,8 @@ public class PalindromeSubstring {
 	{
 		for(int i=0; i<ch.length(); i++)
 		{
-			substr(ch, i, i, set);
-			
-			substr(ch, i, i+1, set);
+			substr(ch, i, i, set);//e, g, l, o
+			substr(ch, i, i+1, set);//oo, goog
 		}
 		System.out.println(set);
 	}
@@ -31,5 +30,4 @@ public class PalindromeSubstring {
 			j++;
 		}
 	}
-
 }

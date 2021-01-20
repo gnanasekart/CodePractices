@@ -3,8 +3,6 @@ package javaProgram;
 import org.testng.annotations.Test;
 
 public class ArrayTarget {
-
-
 	static int target = 9;
 	static int[] arr = {2, 7, 11, 15};
 	

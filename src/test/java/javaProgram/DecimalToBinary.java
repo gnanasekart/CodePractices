@@ -11,9 +11,7 @@ public class DecimalToBinary {
 	4/2 = q-2 r=0
 	2/2       1    0
 			1 0 0 1 1 1 0 0
-
 	 */
-
 	public static void main(String[] args) {
 		//System.out.println(DtoB(15611));
 		System.out.println(DectoOctal(109));

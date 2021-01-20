@@ -51,6 +51,7 @@ public class Hashmapdemos {
 
 		//add the keyset from map4
 		combkeys.addAll(map4.keySet());
+		System.out.println(combkeys);
 		//here keys will be 1, 2, 3, 4 + 1, 2, 3, 4, 5, 6 = 1, 2, 3, 4, 5, 6 replace over the existing value
 		combkeys.removeAll(map1.keySet());
 		//now remove the map1 keys from map4 so 1, 2, 3, 4 will be removed and remaining 5, 6 only available
@@ -61,19 +62,20 @@ public class Hashmapdemos {
 		map5.put(2, "B");
 		map5.put(3, "C");
 
-
 		HashMap<Integer, String> map6 = new HashMap<Integer, String>();
 
 		map6.put(4, "A");
 		map6.put(5, "B");
 		map6.put(6, "C");
 		
-
 		HashMap<Integer, String> map7 = new HashMap<Integer, String>();
 		map7.put(1, "A");
 		map7.put(2, "B");
 		map7.put(3, "C");
-		map7.put(3, "C");
+		map7.put(3, "D");
+		map7.put(3, "E");
+		System.out.println(map7.get(3));//E
+		System.out.println(map7.put(3, "f"));//E
 		
 		System.out.println(new ArrayList<>(map5.values()).equals(new ArrayList<>(map6.values())));
 		System.out.println(new ArrayList<>(map5.values()).equals(new ArrayList<>(map7.values())));

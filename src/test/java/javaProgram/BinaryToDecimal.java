@@ -14,21 +14,22 @@ public class BinaryToDecimal {
 	2^7*1 = 128
 	------------
 	 * 
-	  */
+	 */
 
-	
 	public static void main(String[] args) {
 		long num = 10011011;
-System.out.println(BtoD(num));
+		System.out.println(BtoD(num));
 	}
 	public static int BtoD(long num)
-	{int i = 0;
-	int sum =0;
-		while(num != 0) {
+	{
+		int i = 0;
+		int sum =0;
+		while(num != 0) 
+		{
 			long n = num % 10;
 			num = num / 10;
-		 sum += (n * (Math.pow(2, i)));
-		 ++i;
+			sum += (n * (Math.pow(2, i)));
+			++i;
 		}
 		return sum;
 	}

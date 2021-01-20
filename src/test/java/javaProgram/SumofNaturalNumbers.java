@@ -4,7 +4,6 @@ public class SumofNaturalNumbers {
 
 	public static void main(String[] args) {
 		
-		
 		long start = System.nanoTime();
 		int max = 100000;
 		int sum = 0;

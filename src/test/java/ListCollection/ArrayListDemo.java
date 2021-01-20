@@ -46,5 +46,20 @@ public class ArrayListDemo {
 	{
 		//System.out.println(o.toString());
 	}
+	
+	ArrayList<String> list = new ArrayList<String>();
+	
+	//Sorting the list
+   Collections.sort(list);
+   
+ //Sorting the list by ignoring the case
+   Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
+   
+ //Sorting the list in the reverse order
+   Collections.sort(list, Collections.reverseOrder());
+    
+    
+	
+	
 	}
 }

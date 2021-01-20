@@ -17,7 +17,8 @@ public class NoOfDigit {
 		String string = Integer.toString(num);
 		int charArray = string.toCharArray().length;
 		System.out.println(charArray);
-
+		
+		String d ="1234567";
+		System.out.println(d.length());
 	}
-
 }

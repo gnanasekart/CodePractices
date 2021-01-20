@@ -23,7 +23,7 @@ public class AEIOU {
 		Matcher matcher = compile.matcher(email);
 		//System.out.println(matcher.matches());
 		 */
-		//System.out.println(vovel(one));
+		System.out.println(vovel(one));
 		String pat = "\\d+";
 		Pattern compile = Pattern.compile(pat);
 		Matcher matcher = compile.matcher(value);
@@ -31,20 +31,14 @@ public class AEIOU {
 		{//returning only group of digit from above string 
 			System.out.println("After regex "+matcher.group());	
 		}
-		
-		
-		
-	}
+			}
+	
 	public static String vovel(String one) {
 		
 		Character vowels[] = {'a', 'e', 'i', 'o', 'u','A','E','I','O','U'}; 
-        
         List<Character> al = Arrays.asList(vowels); 
-          
         StringBuffer sb = new StringBuffer(one); 
-          
         for (int i = 0; i < sb.length(); i++) { 
-             
             if(al.contains(sb.charAt(i))){ 
                sb.replace(i, i+1, "") ; 
                i--; 
@@ -52,9 +46,4 @@ public class AEIOU {
        } 
 		return sb.toString();
 		}
-	
-	
-	
-	
 }
-
