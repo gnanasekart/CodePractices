@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class ConsecutiveElement {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		int[] list = {100, 4, 200, 3, 1, 2};
 		System.out.println(longconseq(list));
 	}
@@ -12,9 +13,7 @@ public class ConsecutiveElement {
 public static int longconseq(int[] array) {
 	int length = 1;
     int ans = 1;
-	
     Arrays.sort(array);
-    
     for (int i = 0; i < array.length - 1; i++)
     {
         if(array[i] == array[i+1]) 

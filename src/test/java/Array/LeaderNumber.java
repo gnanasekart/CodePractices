@@ -11,7 +11,6 @@ public class LeaderNumber {
 
 	static void findTheLeaders(int inputArray[])
     {
-        System.out.println("The leaders in "+Arrays.toString(inputArray)+" are :");
         for (int i = 0; i < inputArray.length; i++)
         {
             boolean flag = true;

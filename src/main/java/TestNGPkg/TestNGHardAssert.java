@@ -29,6 +29,5 @@ public class TestNGHardAssert {
 		
 		System.out.println("end");
 		soft.assertAll();//if we dont use this stmt means soft assert will show failed cases as pass only
-		
 	}
 }

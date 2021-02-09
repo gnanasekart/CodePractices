@@ -10,13 +10,16 @@ public class ArrayConversion {
 
 	public static void main(String[] args) {
 		String[] array = new String[] {"ANDROID", "JSP", "JAVA", "STRUTS", "HADOOP", "JSF"};
-        
+		System.out.println(array);
+		System.out.println("--------");
 		//Array To ArrayList
         ArrayList<String> list1 = new ArrayList<String>();
          list1.addAll(Arrays.asList(array));
-             
+         System.out.println(list1);
+ 		System.out.println("--------");
         Collections.addAll(list1, array);
-        
+        System.out.println(list1);
+		System.out.println("--------");
         //stream
         List<Object> list = Arrays.stream(array).collect(Collectors.toList());
      
@@ -25,9 +28,7 @@ public class ArrayConversion {
         list.toArray(array);
         for (String string : array)
         {
-            System.out.println(string);
-        }
-        
+          //  System.out.println(string);
+        }   
 	}
-
 }

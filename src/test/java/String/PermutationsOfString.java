@@ -21,7 +21,7 @@ public class PermutationsOfString {
 		{
 			for (int i = 0; i < input.length(); i++)
 			{   
-				StringPermutation(permutation+input.charAt(i), input.substring(0, i)+input.substring(i+1, input.length()));
+	StringPermutation(permutation+input.charAt(i), input.substring(0, i)+input.substring(i+1, input.length()));
 			}
 			/*
 			 * permutation = “”,  input = “JSP”
@@ -32,7 +32,7 @@ public class PermutationsOfString {
 
 				for i = 0
 
-				StringPermutation(permutation+input.charAt(i), input.substring(0, i)+input.substring(i+1, input.length()))
+	StringPermutation(permutation+input.charAt(i), input.substring(0, i)+input.substring(i+1, input.length()))
 
 				–> StringPermutation(“”+input.charAt(0), input.substring(0, 0)+input.substring(0+1, 3))
 
@@ -41,8 +41,6 @@ public class PermutationsOfString {
 				–> StringPermutation(“J”, “SP”)
 
 				permutation = “J”,  input = “SP” 
-			 * 
-			 * 
 			 * 
 			 */
 		}

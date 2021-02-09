@@ -1,7 +1,5 @@
 package Array;
-
 public class SecondlargestNumber {
-
 	public static void main(String[] args) {
 		System.out.println(secondLargest(new int[] {45, 51, 28, 75, 49, 42}));
         System.out.println(secondLargest(new int[] {985, 521, 975, 831, 479, 861}));

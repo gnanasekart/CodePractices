@@ -29,7 +29,6 @@ public class PrimeNumber {
 		{
 			System.out.println("not a prime number");
 		}
-
 	}
 
 	public static void primebetween2(int start, int end)
@@ -56,18 +55,42 @@ public class PrimeNumber {
 	public static void primecheck(int n)
 	{ 
 		int i = 2;
-	if(n == 1)
-	{
-		System.out.println("not prime");
+		if(n == 1)
+		{
+			System.out.println("not prime");
+		}
+		else if(i<=n/2 && n%i == 0)
+		{
+			System.out.println("not prime");
+		}
+		else
+		{
+			System.out.println("prime only");
+		}
+		++i;
 	}
-	else if(i<=n/2 && n%i == 0)
-	{
-		System.out.println("not prime");
-	}
-	else
-	{
-		System.out.println("prime only");
-	}
-	++i;
+
+	public static void hundredPrimeNumber()
+	{		
+		int i =0;
+		int num =0;
+		String  primeNumbers = "";
+		for (i = 1; i <= 100; i++)         
+		{ 		  	  
+			int counter=0; 	  
+			for(num =i; num>=1; num--)
+			{
+				if(i%num==0)
+				{
+					counter = counter + 1;
+				}
+			}
+			if (counter ==2)
+			{
+				primeNumbers = primeNumbers + i + " ";
+			}	
+		}	
+		System.out.println("Prime numbers from 1 to 100 are :");
+		System.out.println(primeNumbers);
 	}
 }

@@ -23,7 +23,5 @@ public class AddExtension {
 		WebDriver d = new ChromeDriver(option);
 		d.get("https://www.guru99.com/desired-capabilities-selenium.html");
 		d.manage().window().maximize();
-		
 	}
-
 }

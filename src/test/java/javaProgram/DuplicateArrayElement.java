@@ -72,24 +72,20 @@ public class DuplicateArrayElement {
 		}
 	}
 
-
 	//	public static void hashSetJava8(String[] lang) 
 	//	{   
 	//	    Set<Integer> uniqueElements = new HashSet<>();
-	//	         
 	//	    Set<Integer> duplicateElements =  Arrays.stream(lang)
 	//	                                            .filter(i -> !uniqueElements.add(i))
 	//	                                            .boxed()
 	//	                                            .collect(Collectors.toSet());
-	//	         
 	//	    System.out.println(duplicateElements);
 	//	}
-
 	//3. HashMap concept
 
-	public static void hashMap(String[] lang) {
+	public static void hashMap(String[] lang) 
+	{
 		Map<String,Integer> hashMap = new HashMap<String,Integer>();
-
 		for(String l: lang)
 		{
 			Integer count = hashMap.get(l);
@@ -101,7 +97,6 @@ public class DuplicateArrayElement {
 				hashMap.put(l, ++count);
 			}
 		}
-
 		System.out.println(hashMap);
 		Set<Entry<String,Integer>> entrySet = hashMap.entrySet();
 		for(Entry<String,Integer> es: entrySet)

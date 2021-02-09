@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class TestNgParallel {
 			String text="";
 			
-		@Test(threadPoolSize = 5, invocationCount = 5,timeOut = 1000, groups = {"smoke", "regression"})
+		@Test(threadPoolSize = 5, invocationCount = 5, timeOut = 1000, groups = {"smoke", "regression"})
 		@Parameters({ "text" })
 		public void smokeTest1(String text)
 		{

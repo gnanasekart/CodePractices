@@ -23,7 +23,5 @@ public class Demo {
 		System.out.println(d.getPageSource());
 		
 		Select s = new Select(d.findElement(By.id("p")));
-
 	}
-
 }

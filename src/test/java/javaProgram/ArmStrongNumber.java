@@ -1,44 +1,39 @@
 package javaProgram;
-
 public class ArmStrongNumber {
-
 	public static void main(String[] args) {
-
 		int[] a = {153, 371, 407, 9474, 54748};
-
 		armStrong(a);
 		//threeDigit();
 	}
 
 	public static void armStrong(int[] a)
 	{
-		
-	for(int j = 0; j<a.length; j++)
-	{
-		int value = a[j];
-		int real = a[j];
-		int digits = String.valueOf(value).length();
-		int sum = 0;
-		while(value != 0)
+		for(int j = 0; j<a.length; j++)
 		{
-			int lastvalue = value%10;
-			int result = 1;
-			for(int i=0; i<digits; i++)
+			int value = a[j];
+			int real = a[j];
+			int digits = String.valueOf(value).length();
+			int sum = 0;
+			while(value != 0)
 			{
-				result = result * lastvalue;
+				int lastvalue = value%10;
+				int result = 1;
+				for(int i=0; i<digits; i++)
+				{
+					result = result * lastvalue;
+				}
+				sum = sum+result;
+				value = value/10;
 			}
-			sum = sum+result;
-			value = value/10;
+			if(sum == real)
+			{
+				System.out.println("correct");
+			}
+			else
+			{
+				System.out.println("wrong");
+			}
 		}
-		if(sum == real)
-		{
-			System.out.println("correct");
-		}
-		else
-		{
-			System.out.println("wrong");
-		}
-	}
 	}
 
 	public static void threeDigit()
@@ -65,8 +60,6 @@ public class ArmStrongNumber {
 			}
 		}}
 }
-
-
 /*
  * A number is called an Armstrong number if it is equal to sum of its
  *  digits each raised to the power of number of digits in it. 

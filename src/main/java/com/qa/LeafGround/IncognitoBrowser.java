@@ -80,7 +80,4 @@ public class IncognitoBrowser {
 		d = new EdgeDriver(option);
 		d.get("https://google.com/");
 	}
-
 }
-
-

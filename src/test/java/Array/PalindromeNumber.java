@@ -1,5 +1,6 @@
 package Array;
 import java.util.Scanner;
+
 public class PalindromeNumber 
 {
 	static int reverseNumber(int number)
@@ -14,6 +15,7 @@ public class PalindromeNumber
 		}
 		return reverse;
 	}
+	
 	static boolean checkPalindrome(int number)
 	{
 		int reverse = reverseNumber(number);	         
@@ -26,6 +28,7 @@ public class PalindromeNumber
 			return false;
 		}
 	}
+	
 	static void reverseAndAdd(int number)
 	{
 		if(checkPalindrome(number))

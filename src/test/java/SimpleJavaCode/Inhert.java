@@ -4,8 +4,6 @@ class Inhert implements NewInter, NewInterone {
 
 	public static void main(String[] args) {
 		
-		
-		
 	}
 
 	@Override
@@ -31,5 +29,4 @@ class Inhert implements NewInter, NewInterone {
 		// TODO Auto-generated method stub
 		
 	}
-	
 }

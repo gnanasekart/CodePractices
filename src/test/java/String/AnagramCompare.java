@@ -1,10 +1,8 @@
 package String;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-
 public class AnagramCompare {
 
 	public static void main(String[] args) 
@@ -81,7 +79,8 @@ public class AnagramCompare {
 		if(copyOfs1.length() != copyOfs2.length())
 		{
 			status = false;
-		}else{
+		}else
+		{
 			char[] s1ToArray = copyOfs1.toCharArray();
 			for (char c : s1ToArray)
 			{
@@ -152,41 +151,28 @@ public class AnagramCompare {
 		}
 		else
 		{
-			//Constructing a map containing character as a key and character occurrences as a value
 			HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 			for (int i = 0; i < copyOfs1.length(); i++)
 			{
-				//Getting char from copyOfs1
 				char charAsKey = copyOfs1.charAt(i);
-				//Initializing char count to 0
 				int charCountAsValue = 0;
-				//Checking whether map contains this char
 				if(map.containsKey(charAsKey))
 				{
-					//If contains, retrieving it's count
 					charCountAsValue = map.get(charAsKey);
 				}
-				//Putting char and it's count to map with pre-incrementing char count
 				map.put(charAsKey, ++charCountAsValue);
-				//Getting char from copyOfs2
 				charAsKey = copyOfs2.charAt(i);
-				//Initializing char count to 0
 				charCountAsValue = 0;
-				//Checking whether map contains this char
 				if(map.containsKey(charAsKey))
 				{
-					//If contains, retrieving it's count
 					charCountAsValue = map.get(charAsKey);
 				}
-				//Putting char and it's count to map with pre-decrementing char count
 				map.put(charAsKey, --charCountAsValue);
 			}
-			//Checking each character and it's count
 			for (int value : map.values())
 			{
 				if(value != 0)
 				{
-					//If character count is not equal to 0, then setting status as false
 					status = false;
 				}
 			}

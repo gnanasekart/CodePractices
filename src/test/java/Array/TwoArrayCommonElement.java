@@ -10,10 +10,8 @@ public class TwoArrayCommonElement {
 
 		Integer[] i1 = {1, 2, 3, 4, 5, 4};
         Integer[] i2 = {3, 4, 5, 6, 7, 4};
-        
         String[] s1 = {"ONE", "TWO", "THREE", "FOUR", "FIVE", "FOUR"};        
         String[] s2 = {"THREE", "FOUR", "FIVE", "SIX", "SEVEN", "FOUR"};
- 
         retain(s1, s2);
         retainnum(i1, i2);
 	}

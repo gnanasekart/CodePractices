@@ -45,8 +45,5 @@ public class HyperLink extends TestBase{
 		System.out.println(d.getTitle());
 		d.navigate().back();
 		System.out.println(d.getTitle());
-		
-		
-
 }
 }

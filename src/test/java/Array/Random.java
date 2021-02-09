@@ -24,18 +24,14 @@ public class Random {
     {  for(int i = 0; i < 5; i++)
         {
            // System.out.println("Random Doubles : "+Math.random());
-            
             System.out.println("Random Integers : "+ThreadLocalRandom.current().nextInt());
         }
-    
     System.out.println("Random integers between 0 and 50 using Math.random() :");
     
     for (int i = 0; i < 5; i++)
     {
        // System.out.println((int)(Math.random() * 50));
-    
         System.out.println(ThreadLocalRandom.current().nextInt(0, 50));
     }
     }
-	
 }

@@ -13,16 +13,12 @@ public class longestSubString {
 		
 	    public static void substring(String inputString)
 	    {
-	        //Convert inputString to charArray
-	         
 	        char[] charArray = inputString.toCharArray();
 	        String longestSubstring = null;
 	        int longestSubstringLength = 0;
 	         
-	        //Creating LinkedHashMap with characters as keys and their position as values.
 	        LinkedHashMap<Character, Integer> charPosMap = new LinkedHashMap<Character, Integer>();
 	         
-	        //Iterating through charArray
 	        for (int i = 0; i < charArray.length; i++) 
 	        {
 	            char ch = charArray[i];
@@ -32,7 +28,8 @@ public class longestSubString {
 	                charPosMap.put(ch, i);
 	            }
 	             
-	            //If ch is already present in charPosMap, reposioning the cursor i to the position of ch and clearing the charPosMap
+	            //If ch is already present in charPosMap, reposioning the cursor i to the position of ch
+	            //and clearing the charPosMap
 	              else
 	            {   
 	                i = charPosMap.get(ch);     

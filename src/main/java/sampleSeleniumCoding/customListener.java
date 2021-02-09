@@ -34,13 +34,11 @@ public class customListener extends Screenshot implements ITestListener
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
 		
 	}
 

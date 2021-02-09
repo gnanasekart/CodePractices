@@ -8,7 +8,7 @@ import java.util.Set;
 public class SecondMostCount {
 
 	public static void main(String[] args) {
-		String txt = "welcome to testLeaf";
+		String txt = "welcome to";
 		char[] t = txt.toLowerCase().toCharArray();
 		int i=0;
 		Map<Character, Integer> map = new LinkedHashMap<>();

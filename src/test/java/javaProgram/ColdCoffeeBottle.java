@@ -1,15 +1,13 @@
 package javaProgram;
-
 import java.util.Scanner;
-
 public class ColdCoffeeBottle {
-
 	static int drinkcount = 0;
 	static int exchange;
 	static int bottle;
 	static int count =0;
 	static int bottlecount;
 	static int exchangeRatio;
+	
 	public static void main(String[] args) 
 	{
 	Scanner sc = new Scanner(System.in);
@@ -29,7 +27,6 @@ public class ColdCoffeeBottle {
 	  System.out.println("drinkedcount " +drinkcount);
 	}
 	  
-
 	public static void bottlecalc(int bottle, int exchange)
 	{
 	  if(bottle >= exchange)

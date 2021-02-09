@@ -15,5 +15,4 @@ public class StringCapitalizeWord {
 		}
 System.out.println(captial);
 	}
-
 }

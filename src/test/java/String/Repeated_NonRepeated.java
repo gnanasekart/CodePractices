@@ -7,7 +7,6 @@ public class Repeated_NonRepeated {
 	public static void main(String[] args) {
 		String str = "gnana sekar";
 		repeatedAndNonRepeatedChar(str);
-
 	}
 
 	public static void repeatedAndNonRepeatedChar(String str)
@@ -39,7 +38,5 @@ public class Repeated_NonRepeated {
 				break;
 			}
 		}
-
 	}
-
 }

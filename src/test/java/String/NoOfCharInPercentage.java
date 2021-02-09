@@ -45,5 +45,4 @@ public class NoOfCharInPercentage {
 		System.out.println("oter cases "+df.format(other)+"%");
 		System.out.println("number cases "+df.format(numbers)+"%");
 	}
-
 }

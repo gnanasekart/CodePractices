@@ -1,11 +1,7 @@
 package Array;
-
 import java.util.Arrays;
-
 public class SortByteArray {
-
 	public static void main(String[] args) {
-
 		byte[] byteArray = new byte[] { 13, 9, 15, 24, 4 };
 
 		// Displaying Array before Sorting
@@ -13,8 +9,6 @@ public class SortByteArray {
 		for (byte temp: byteArray){
 			System.out.println(temp);
 		}
-
-		// Sorting the Array
 		Arrays.sort(byteArray);
 		System.out.println("**byte Array After Sorting**");
 		for (byte temp: byteArray){
@@ -33,9 +27,6 @@ public class SortByteArray {
 		 * the range to be sorted is empty.
 		 */
 		Arrays.sort(byteArray2, 2, 5);
-
-		// Displaying array after selective sorting 
-		System.out.println("**Selective Sorting**");
 		for (byte temp: byteArray2){
 			System.out.println(temp);
 		}

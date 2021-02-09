@@ -1,6 +1,7 @@
 package String;
 
-public class Vovel {
+public class Vovel 
+{
 	static boolean isVowel(char c)
 	{
 		return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
@@ -10,31 +11,24 @@ public class Vovel {
 	{
 		int count = 0, res = 0;
 		char[] s = str.toCharArray();
-		
+
 		for (int i = 0; i < s.length; i++) 
 		{
-
-			// Increment current count 
-			// if s[i] is vowel 
 			if (isVowel(s[i])) 
-			count++;	 
-
+				count++;	 
 			else
 			{
-				// check previous value 
-				// is greater then or not
 				res = Math.max(res, count);
-
 				count = 0;
 			}
 		}
-		
-	return Math.max(res, count);
+
+		return Math.max(res, count);
 	}
 
-public static void main (String[] args) 
-{
-	String s = "theeare";
-	System.out.println(longestVowel(s));
-}
+	public static void main (String[] args) 
+	{
+		String s = "theeare";
+		System.out.println(longestVowel(s));
+	}
 }

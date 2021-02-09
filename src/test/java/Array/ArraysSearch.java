@@ -22,8 +22,7 @@ public class ArraysSearch {
 	System.out.println(Arrays.binarySearch(s, "Z", new MyComparator()));//0
 	System.out.println(Arrays.binarySearch(s, "S", new MyComparator()));//-2
 	System.out.println(Arrays.binarySearch(s, "N")); //unpredictable
-	
-	
+		
 	String[] d = {"A", "aai", "hrllo"};
 	Arrays.sort(d);
 	System.out.println(Arrays.binarySearch(d,"Z"));

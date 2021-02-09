@@ -53,5 +53,4 @@ public class RemoveWhiteSpace {
 		String noSpaceStr2 = concat.toString();  
 		System.out.println(noSpaceStr2);  
 	}
-
 }

@@ -13,6 +13,7 @@ public class IntToString {
 		Collections.sort(numList, new sortComparator());
 		for(Integer i : numList){
 			System.out.print(i); 
+			
 		}
 	}
 }

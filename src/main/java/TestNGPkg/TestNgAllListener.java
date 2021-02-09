@@ -32,12 +32,10 @@ public class TestNgAllListener implements ISuiteListener, IInvokedMethodListener
 		   System.out.println("This "+result.getTestName()+" test is successfully passed");
 		  }
 
-		  
 		public void onTestFailure(ITestResult result) 
 		{
 			   System.out.println("This "+result.getName()+" test is failed");
 			   }
-
 
 		public void onTestSkipped(ITestResult result) {
 			   System.out.println("This "+result.getName()+" is skipped");

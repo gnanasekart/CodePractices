@@ -1,11 +1,7 @@
 package TestNGPkg;
-
-import org.testng.SkipException;
 import org.testng.annotations.Test;
-
-public class TestNgGroups {
-
-	
+public class TestNgGroups 
+{
 	@Test(groups = {"smoke", "regression"})
 	public void smokeTest1()
 	{

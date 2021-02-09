@@ -23,7 +23,6 @@ public class StringReverse {
 		
 		System.out.println("string "+name+" is palindrome ? "+palindrome);
 		//List<String> l = new ArrayList<>(Arrays.asList("gnana"));
-		
 	}
 	
 	public static void Stringreverse(String name)

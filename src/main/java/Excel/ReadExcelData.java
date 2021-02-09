@@ -25,20 +25,14 @@ public class ReadExcelData
 		fis.close();	
 	}
 
-
 	public Object[][] readExcel(String sheetname) throws IOException
 	{
 		Object[][] data = null;
-
 		try {
-
 			sheet = book.getSheet(sheetname);
-
 			int rowcount =  sheet.getLastRowNum();
-
 			int columncount = sheet.getRow(0).getLastCellNum();
 			data = new String[rowcount][columncount];
-
 			for(int i = 1; i <rowcount+1; i++)
 			{
 				try {
@@ -80,6 +74,5 @@ public class ReadExcelData
 	
 	public void setexceldata(String sheetname, String value)
 	{
-		
 	}
 }

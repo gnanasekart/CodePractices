@@ -11,8 +11,6 @@ import org.testng.annotations.Test;
 import Seleniumcoding.TestBase;
 
 public class Button extends TestBase {
-
-	
 	Button()
 	{
 		super();

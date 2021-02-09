@@ -15,7 +15,5 @@ public class ArrayRemove {
         
       //Removing an element "Two" from arrayBeforeRemoval
         Object[] arrayAfterRemoval1 = ArrayUtils.removeElement(arrayBeforeRemoval, "Two");
-         
 	}
-
 }

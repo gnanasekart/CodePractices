@@ -58,7 +58,8 @@ public class BrokenLinks extends TestBase {
 		//System.out.println("Total no of URL links = "+linkedlist.get(i).getAttribute("href").length());
 		//System.out.println("no of Active links = " +activelink.size());
 		
-		for (int j = 0; j < linkedlist.size(); j++) {
+		for (int j = 0; j < linkedlist.size(); j++) 
+		{
 			HttpURLConnection connection = (HttpURLConnection) new URL(linkedlist.get(j).getAttribute("href"))
 					.openConnection();
 			connection.connect();
@@ -67,8 +68,4 @@ public class BrokenLinks extends TestBase {
 			System.out.println(linkedlist.get(j).getAttribute("href") + " ---> " + resp);
 		}	
 	}
-
-
-
 }
-

@@ -1,5 +1,4 @@
 package String;
-
 public class Reverse_String_Preserve_Position 
 {
 	public static void main(String[] args) 
@@ -11,9 +10,7 @@ public class Reverse_String_Preserve_Position
 	public static void reverseStr(String inputString)
 	{
 		char[] inputstringarray = inputString.toCharArray();
-		
 		char[] resultarray = new char[inputstringarray.length];
-		
 		for(int i = 0; i < inputstringarray.length; i++)
 		{
 			if(inputstringarray[i] == ' ')
@@ -21,9 +18,7 @@ public class Reverse_String_Preserve_Position
 				resultarray[i] = ' ';
 			}
 		}
-		
 		int j = resultarray.length-1;
-		
 		for(int i=0; i<inputstringarray.length; i++)
 		{
 			if(inputstringarray[i] != ' ')

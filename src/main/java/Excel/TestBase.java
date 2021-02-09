@@ -19,19 +19,19 @@ public class TestBase {
 	static RemoteWebDriver driver;
 
 	@BeforeMethod
-public void launchbrowser()
-{
-	WebDriverManager.chromedriver().setup();
-	driver = new ChromeDriver();
-	driver.get("http://leaftaps.com/opentaps/control/main");
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	driver.manage().deleteAllCookies();
-	driver.findElementById("username").sendKeys("demosalesmanager");
-	driver.findElementById("password").sendKeys("crmsfa");
-	driver.findElementByClassName("decorativeSubmit").click();
-	driver.findElementByLinkText("CRM/SFA").click();
-}
+	public void launchbrowser()
+	{
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("http://leaftaps.com/opentaps/control/main");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().deleteAllCookies();
+		driver.findElementById("username").sendKeys("demosalesmanager");
+		driver.findElementById("password").sendKeys("crmsfa");
+		driver.findElementByClassName("decorativeSubmit").click();
+		driver.findElementByLinkText("CRM/SFA").click();
+	}
 
 	@AfterMethod
 	public void teardown()
@@ -52,7 +52,7 @@ public void launchbrowser()
 		ReadExcelData excel = new ReadExcelData(filename);
 		return excel.readExcel(sheetname);
 	}
-	
+
 	@DataProvider(name ="update")
 	public Object[][] update() throws IOException
 	{

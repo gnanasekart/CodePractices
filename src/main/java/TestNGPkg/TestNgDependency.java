@@ -19,8 +19,7 @@ public class TestNgDependency
 		context.setAttribute("addition", add);
 		Assert.assertEquals(TestNgSkip.add(2, 2), 4);
 		//depends on method from another class
-		//if that method comes update @Test means it will not consider it need to be out of annotations
-		
+		//if that method comes update @Test means it will not consider it need to be out of annotations	
 		System.out.println("first");
 	}
 

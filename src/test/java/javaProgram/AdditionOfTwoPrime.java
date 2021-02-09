@@ -1,11 +1,8 @@
 package javaProgram;
-
 public class AdditionOfTwoPrime {
-
 	public static void main(String[] args) {
 		int n = 34;
 		Boolean flags = false;
-
 		for(int i =2; i<=n/2; i++)
 		{
 			if(isPrime(i) && isPrime(n-i))
@@ -14,7 +11,6 @@ public class AdditionOfTwoPrime {
 				flags = true;
 			}
 		}
-
 		if(!flags)
 		{
 			System.out.println("it is nothing");

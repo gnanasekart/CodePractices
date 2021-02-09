@@ -3,7 +3,7 @@ package Array;
 public class LargestNoExcludeDigit {
 
 	public static void main(String[] args) {
-		 System.out.println(getLLessThanN(123, 1));
+		 System.out.println(getLLessThanN(123, 3));
 	}
 	static int getLLessThanN(int number, int digit)
     { char c = Integer.toString(digit).charAt(0);
