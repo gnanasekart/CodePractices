@@ -97,7 +97,8 @@ public class AnagramCompare {
 		if(status)
 		{
 			System.out.println(s1+" and "+s2+" are anagrams");
-		}else{
+		}else
+		{
 			System.out.println(s1+" and "+s2+" are not anagrams");
 		}
 	}

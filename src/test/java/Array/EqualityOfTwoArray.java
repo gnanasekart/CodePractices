@@ -21,9 +21,11 @@ public class EqualityOfTwoArray {
        // Boolean status = numberArray(arrayOne, arrayTwo);
         Boolean status = arraySort(s1, s2);
         
-        if (status){
+        if (status)
+        {
             System.out.println("Two Arrays Are Equal");
-        } else {
+        } else 
+        {
             System.out.println("Two Arrays Are Not equal");
         }
     }

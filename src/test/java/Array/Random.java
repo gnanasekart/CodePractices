@@ -21,7 +21,8 @@ public class Random {
 	}
 	
 	public static void randomMethod()
-    {  for(int i = 0; i < 5; i++)
+    {  
+		for(int i = 0; i < 5; i++)
         {
            // System.out.println("Random Doubles : "+Math.random());
             System.out.println("Random Integers : "+ThreadLocalRandom.current().nextInt());

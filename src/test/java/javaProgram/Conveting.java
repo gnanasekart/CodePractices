@@ -23,8 +23,7 @@ public class Conveting {
 		String s1 ="200";  
 		//converting String into Integer using Integer.valueOf() method  
 		Integer i1 =Integer.valueOf(s);
-
-
+		
 		//int to string
 		//String.valueOf() method converts int to String. The valueOf() is the static method of String class.
 

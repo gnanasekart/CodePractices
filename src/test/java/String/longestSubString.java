@@ -2,7 +2,8 @@ package String;
 
 import java.util.LinkedHashMap;
 
-public class longestSubString { 
+public class longestSubString 
+{ 
 		public static void main(String[] args) 
 	    {   
 			String s1 = "javaconceptoftheday";

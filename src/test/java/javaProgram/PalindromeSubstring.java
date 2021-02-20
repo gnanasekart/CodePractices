@@ -3,9 +3,10 @@ package javaProgram;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PalindromeSubstring {
-
-	public static void main(String[] args) {
+public class PalindromeSubstring 
+{
+	public static void main(String[] args) 
+	{
 		String ch = "google";
 		Set<String> set = new HashSet<>();
 		subStringPalindrome(ch, set);
